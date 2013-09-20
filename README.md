@@ -1,4 +1,4 @@
 plg_content_terebinth
-=====================
+===================
 
-Terebinth Content Plugin
+See https://github.com/nwheeler/terebinth
