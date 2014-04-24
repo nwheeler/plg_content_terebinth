@@ -31,6 +31,7 @@ class plgContentTerebinth extends JPlugin
 
     function onContentBeforeSave($context, &$article, $isNew)
     {
+        $newURL = "/";
         if (!$this->params->def('onContentBeforeSave'))
         {
             return true;
