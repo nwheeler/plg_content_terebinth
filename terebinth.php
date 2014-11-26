@@ -13,8 +13,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 require_once(JPATH_ADMINISTRATOR . '/components/com_terebinth/helpers/terebinth.php');
 include_once JPATH_SITE . '/components/com_content/helpers/route.php';
-include_once JPATH_SITE . '/includes/application.php';
-
 
 
 class plgContentTerebinth extends JPlugin
@@ -29,7 +27,7 @@ class plgContentTerebinth extends JPlugin
         return true;
     }
 
-    function onContentBeforeSave($context, &$article, $isNew)
+    function onContentBeforeSave($context, $article, $isNew)
     {
         $newURL = "/";
         if (!$this->params->def('onContentBeforeSave'))
