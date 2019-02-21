@@ -44,12 +44,6 @@ class plgContentTerebinth extends JPlugin
                 $router = JRouter::getInstance('site');
                 $router->setMode($config->get('sef',1));
                 $newURL = $router->build($URL)->toString(array('path', 'query', 'fragment'));
-                $base = JURI::base(true);
-                if (JString::strpos($newURL, $base) !== 0)
-                {
-                    throw new Exception('Unexpected route.');
-                }
-                $newURL = JString::substr($newURL, JString::strlen($base));
                 break;
             case "com_media.file":
                 $filepath = $article->filepath;
